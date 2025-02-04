@@ -405,6 +405,8 @@ spec:
         annotations:
           {{- . | toYaml | nindent 10 }}
         {{- end }}
+      apiVersion: v1
+      kind: PersistentVolumeClaim
       spec:
         accessModes:
           - {{ .Values.persistence.accessMode | quote }}
